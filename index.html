@@ -88,8 +88,38 @@
             <a href="https://youtube.com/@akashwebdev" target="_blank">YouTube</a>
             <a href="https://github.com/akash-ka-swag" target="_blank">GitHub</a>
         </div>
-        
+        <!-- Contact Form -->
+<div style="max-width:400px; margin:30px auto; padding:20px; background:#1f1f1f; border-radius:10px; border:1px solid #00ff88;">
+  <h3 style="text-align:center; color:#00ff88;">Contact Me</h3>
+  <input type="text" id="name" placeholder="Apna Naam" style="width:100%; padding:10px; margin:8px 0; border:1px solid #00ff88; border-radius:5px; background:#0a0a0a; color:white;">
+  <input type="text" id="message" placeholder="Message likho..." style="width:100%; padding:10px; margin:8px 0; border:1px solid #00ff88; border-radius:5px; background:#0a0a0a; color:white;">
+  <button onclick="sendToWhatsApp()" style="width:100%; padding:12px; background:#00ff88; color:#000; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">
+    Send on WhatsApp
+  </button>
+</div>
         <p class="footer">Made with 💚 by Akash | akash-ka-swag.github.io</p>
     </div>
+<!-- Music Player -->
+<audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()" style="position:fixed; bottom:20px; right:20px; padding:12px 18px; border:none; border-radius:50px; background:#ff0050; color:white; font-weight:bold; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.3);">
+  ▶️ Play
+</button>
+
+<script>
+function toggleMusic() {
+  var music = document.getElementById("bgMusic");
+  var btn = document.getElementById("musicBtn");
+  if (music.paused) {
+    music.play();
+    btn.innerHTML = "⏸️ Pause";
+  } else {
+    music.pause();
+    btn.innerHTML = "▶️ Play";
+  }
+}
+</script>
 </body>
 </html>
