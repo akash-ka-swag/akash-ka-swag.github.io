@@ -108,7 +108,6 @@
   ▶️ Play
 </button>
 
-
 <script>
 function toggleMusic() {
   var music = document.getElementById("bgMusic");
@@ -137,9 +136,9 @@ function sendToWhatsApp() {
     + "Message: " + message + "%0a%0a" 
     + "Sent from akash-ka-swag.github.io";
   
-  window.open(url, '_blank');
+  // YE LINE CHANGE KI HAI - window.open KI JAGAH
+  window.location.href = url;
 }
-
 </script>
 </body>
 </html>
