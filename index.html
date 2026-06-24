@@ -85,7 +85,7 @@
 </head>
 <body>
     <div class="container">
-            <img src="akash.jpg" class="profile-pic" alt="Akash">
+            <img src="https://i.ibb.co/ksbV7gYj/akash-blue.jpg" alt="Akash ki photo" class="profile-pic">
         <h1>AKASH KA SWAG</h1>
         <p class="tagline"> jo kaho vo karo jarur |KANPUR,UP 🌹💻</p>
         
@@ -156,7 +156,32 @@ function sendToWhatsApp() {
 
 <script>
 function badalDe() {
-document.querySelector('.swag-line').innerHTML = "AKASH BHAI OP 🔥<br>JS Master Loading... 💻";
+  // 1. Random color ke liye
+  const colors = ['#ff0080', '#00ff88', '#ff8800', '#0088ff', '#ff0044'];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  
+  // 2. Random text ke liye  
+  const texts = [
+    "AKASH BHAI OP 🔥<br>JS Master Loading... 💻",
+    "King of my own world 💪<br>Hustle, Loyality, Respect 🔥",
+    "Coding ka Baap 😎<br>GitHub ka Raja 👑",
+    "Lucknow ka Sher 🦁<br>Kanpur ka Swag 🌶️"
+  ];
+  const randomText = texts[Math.floor(Math.random() * texts.length)];
+  
+  // 3. Box ko change karo
+  const box = document.querySelector('.swag-line');
+  box.innerHTML = randomText;
+  box.style.background = randomColor;
+  box.style.boxShadow = `0 0 20px ${randomColor}`;
+  
+  // 4. Photo bhi change karo
+  const photo = document.querySelector('.profile-pic');
+  const photos = [
+    'https://i.ibb.co/ksbV7gYj/akash-blue.jpg',
+    'https://i.ibb.co/VYvK8Y1/akash-red.jpg' // Dusri photo ka link daal dena
+  ];
+  photo.src = photos[Math.floor(Math.random() * photos.length)];
 }
 </script>
 </body>
