@@ -108,6 +108,7 @@
   ▶️ Play
 </button>
 
+
 <script>
 function toggleMusic() {
   var music = document.getElementById("bgMusic");
@@ -120,6 +121,25 @@ function toggleMusic() {
     btn.innerHTML = "▶️ Play";
   }
 }
+
+function sendToWhatsApp() {
+  let name = document.getElementById("name").value;
+  let message = document.getElementById("message").value;
+  let number = "919580173772";
+  
+  if(name == "" || message == ""){
+    alert("Bhai naam aur message dono bharna padega");
+    return;
+  }
+  
+  let url = "https://wa.me/" + number + "?text=" 
+    + "Name: " + name + "%0a" 
+    + "Message: " + message + "%0a%0a" 
+    + "Sent from akash-ka-swag.github.io";
+  
+  window.open(url, '_blank');
+}
+
 </script>
 </body>
 </html>
