@@ -155,7 +155,8 @@ function sendToWhatsApp() {
 </script>
     <script>
 function badalDe() {
-  // 1. Random color ke liye
+    
+    // 1. Random color ke liye
   const colors = ['#ff0080', '#00ff88', '#ff8800', '#0088ff', '#ff0044'];
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   
@@ -173,7 +174,7 @@ function badalDe() {
   box.innerHTML = randomText;
   box.style.background = randomColor;
   box.style.boxShadow = `0 0 20px ${randomColor}`;
-  
+  document.getElementById('bgMusic').play();
   console.log('Button chal gaya bhai 🔥'); // Test ke liye
 }
     </script>
