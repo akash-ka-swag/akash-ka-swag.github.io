@@ -153,15 +153,13 @@ function sendToWhatsApp() {
   window.location.href = url;
 }
 </script>
-
-
-<script>
+    <script>
 function badalDe() {
   // 1. Random color ke liye
   const colors = ['#ff0080', '#00ff88', '#ff8800', '#0088ff', '#ff0044'];
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   
-  // 2. Random text ke liye 
+  // 2. Random text ke liye
   const texts = [
     "AKASH BHAI OP 🔥<br>JS Master Loading... 💻",
     "King of my own world 💪<br>Hustle, Loyality, Respect 🔥",
@@ -174,7 +172,10 @@ function badalDe() {
   const box = document.querySelector('.swag-line');
   box.innerHTML = randomText;
   box.style.background = randomColor;
-  box.style.boxShadow = `0 0 20px ${randomColor};
-</script>
+  box.style.boxShadow = `0 0 20px ${randomColor}`;
+  
+  console.log('Button chal gaya bhai 🔥'); // Test ke liye
+}
+    </script>
 </body>
 </html>
