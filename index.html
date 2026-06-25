@@ -86,7 +86,7 @@
 <body>
      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <div class="container">
-            <img src="https://i.ibb.co/ksbV7gYj/akash.jpg" alt="Akash ki photo" class="profile-pic">
+            <img id="profilePic" src="./akash.jpg" alt="Akash ki photo" class="profile-pic">
         <h1>AKASH KA SWAG</h1>
         <p class="tagline"> jo kaho vo karo jarur |KANPUR,UP 🌹💻</p>
         
@@ -153,29 +153,41 @@ function sendToWhatsApp() {
   window.location.href = url;
 }
 </script>
-    <script>
-function badalDe() {
     
-    // 1. Random color ke liye
-  const colors = ['#ff0080', '#00ff88', '#ff8800', '#0088ff', '#ff0044'];
+function badalDe() {
+  const colors = ['#ff0080', '#00ff88', '#ff8800', '#0088ff', '#ff0044', '#8a2be2'];
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   
-  // 2. Random text ke liye
   const texts = [
     "AKASH BHAI OP 🔥<br>JS Master Loading... 💻",
     "King of my own world 💪<br>Hustle, Loyality, Respect 🔥",
     "Coding ka Baap 😎<br>GitHub ka Raja 👑",
-    "Lucknow ka Sher 🦁<br>Kanpur ka Swag 🌶️"
+    "Lucknow ka Sher 🦁<br>Kanpur ka Swag 🌶️",
+    "Aag Laga Di 🔥<br>System Hila Diya ⚡",
+    "Bhai ka Swag 😎<br>Alag hi level 💯"
   ];
   const randomText = texts[Math.floor(Math.random() * texts.length)];
   
-  // 3. Box ko change karo
+  // 6 PHOTO WALA CODE 👇
+  const photos = [
+    './akash.jpg', 
+    './akash2.jpg', 
+    './akash3.jpg',
+    './akash4.jpg',
+    './akash5.jpg',
+    './akash6.jpg'
+  ];
+  const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
+  document.getElementById('profilePic').src = randomPhoto;
+  
   const box = document.querySelector('.swag-line');
   box.innerHTML = randomText;
   box.style.background = randomColor;
   box.style.boxShadow = `0 0 20px ${randomColor}`;
-    document.getElementById('clickSound').play();
-  console.log('Button chal gaya bhai 🔥'); // Test ke liye
+  
+  document.getElementById('clickSound').play();
+  
+  console.log('Magic Button OP 🔥 Photo bhi change');
 }
     </script>
 </body>
